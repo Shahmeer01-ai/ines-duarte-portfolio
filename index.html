@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ines Duarte — Ceramic Studio</title>
+<meta name="description" content="Sample portfolio: Ines Duarte, ceramic artist making handmade stoneware tableware and vessels.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#dde4df;--ink:#17201d;--mute:#53605a;--rule:#b9c4bd;--p1:#cfd9d3}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10171a;--ink:#e8ece9;--mute:#98a6a0;--rule:#27343a;--p1:#18242a}}
+:root[data-theme="dark"]{--bg:#10171a;--ink:#e8ece9;--mute:#98a6a0;--rule:#27343a;--p1:#18242a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 "Instrument Sans",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid #c8933a;outline-offset:3px}
+.serif{font-family:"Fraunces",Georgia,serif}
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:20px clamp(18px,4vw,52px);background:linear-gradient(var(--bg),transparent)}
+header a{text-decoration:none;font-weight:500}
+header nav a{margin-left:clamp(14px,3vw,34px);position:relative}
+header nav a::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+header nav a:hover::after{transform:scaleX(1)}
+.logo{font-family:"Fraunces",serif;font-size:1.25rem;font-style:italic;font-weight:300}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:100px clamp(18px,4vw,52px) 0;position:relative;overflow:hidden}
+.hero h1{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(4.6rem,22vw,22rem);line-height:.8;letter-spacing:-.05em;margin:0;position:relative;z-index:1}
+.hero h1 em{display:block;font-style:italic;margin-left:14vw}
+.tag{position:absolute;top:110px;left:clamp(18px,4vw,52px);max-width:26ch;color:var(--mute);margin:0}
+.shelf{position:relative;z-index:2;display:flex;justify-content:space-around;align-items:flex-end;gap:2vw;margin:-6vw 0 0;padding-bottom:0;border-bottom:3px solid var(--ink)}
+.shelf .v{width:clamp(56px,15vw,190px);transition:transform .25s ease-out;will-change:transform}
+.v svg{display:block;width:100%;height:auto;overflow:visible}
+.wrap{padding:0 clamp(18px,4vw,52px)}
+.sec{padding-top:clamp(90px,13vw,190px)}
+h2{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(2.6rem,8vw,7.5rem);line-height:.92;letter-spacing:-.04em;margin:0}
+h2 em{font-style:italic}
+.lead{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:20px}
+.lead p{max-width:34ch;margin:0;color:var(--mute)}
+.col{display:grid;grid-template-columns:repeat(12,1fr);align-items:center;margin-top:clamp(40px,6vw,80px);min-height:min(88vh,760px);position:relative;overflow:hidden}
+.col .stage{grid-column:1/8;height:100%;min-height:380px;display:flex;align-items:flex-end;justify-content:center;gap:3%;padding:40px 6% 0;position:relative;grid-row:1}
+.col .info{grid-column:8/13;padding:40px clamp(20px,4vw,56px);grid-row:1;position:relative;z-index:1}
+.col:nth-of-type(even) .stage{grid-column:6/13}
+.col:nth-of-type(even) .info{grid-column:1/6}
+.col .num{font:300 italic clamp(1rem,2vw,1.4rem) "Fraunces",serif}
+.col h3{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2.2rem,5vw,4.4rem);line-height:.95;letter-spacing:-.035em;margin:10px 0 16px}
+.col p{margin:0 0 8px;max-width:38ch}
+.col .stage .v{width:clamp(70px,14%,150px);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.col .stage .v:nth-child(2n){width:clamp(80px,19%,200px)}
+.col .stage .v:hover{transform:translateY(-14px) rotate(-2deg)}
+.stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12%;background:rgba(0,0,0,.18)}
+.stage .v{position:relative;z-index:1}
+.meta{display:flex;gap:18px;flex-wrap:wrap;color:inherit;opacity:.8;font-size:.92rem;margin-top:14px}
+.steps{margin-top:56px;position:relative;padding-left:34px}
+.steps::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--rule)}
+.steps i{position:absolute;left:7px;top:8px;width:2px;height:var(--h,0%);background:#c8933a;max-height:calc(100% - 16px)}
+.step{padding:0 0 clamp(36px,5vw,64px);position:relative}
+.step::before{content:"";position:absolute;left:-34px;top:14px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--rule);transition:.3s}
+.step.on::before{border-color:#c8933a;background:#c8933a}
+.step h3{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(2rem,5.5vw,4.6rem);line-height:1;letter-spacing:-.03em;margin:0}
+.step p{margin:6px 0 0;max-width:46ch;color:var(--mute)}
+.about{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:50px;align-items:start}
+.about .big{grid-column:1/9;font:300 clamp(1.7rem,3.8vw,3.4rem)/1.12 "Fraunces",serif;letter-spacing:-.025em;margin:0}
+.about .facts{grid-column:9/13;display:grid;gap:18px;border-top:1px solid var(--rule);padding-top:16px}
+.facts dt{color:var(--mute);font-size:.9rem}.facts dd{margin:0 0 4px;font-weight:500}
+.end{padding:clamp(100px,14vw,200px) clamp(18px,4vw,52px) 36px;position:relative}
+.end h2{font-size:clamp(3rem,12vw,12rem);line-height:.88}
+.mail{display:inline-block;margin-top:44px;font:300 italic clamp(1.4rem,4vw,3rem) "Fraunces",serif;border-bottom:2px solid #c8933a;text-decoration:none;word-break:break-word}
+.links{display:flex;gap:28px;flex-wrap:wrap;margin:38px 0 80px}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:var(--mute);font-size:.9rem;border-top:1px solid var(--rule);padding-top:16px}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:800px){.tag{display:none}.col{display:block;min-height:0}.col .stage,.col:nth-of-type(even) .stage{height:360px}.col .info,.col:nth-of-type(even) .info{padding:30px 20px 50px}.about .big,.about .facts{grid-column:1/13}.hero h1 em{margin-left:6vw}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">Ines Duarte</a>
+  <nav aria-label="Primary"><a href="#collections">Collections</a><a href="#making">Making</a><a href="#studio">Studio</a><a href="#contact">Commission</a></nav>
+</header>
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <p class="tag">Handmade stoneware for the table, thrown and glazed in a small studio in Lisbon.</p>
+  <h1>Ines<em>Duarte</em></h1>
+  <div class="shelf" id="shelf" aria-hidden="true"></div>
+</section>
+
+<section class="sec wrap" id="collections">
+  <div class="lead"><h2>Four <em>collections</em></h2><p>Each series starts with one glaze test and grows into a full set. Hover a piece to lift it.</p></div>
+</section>
+<div id="cols"></div>
+
+<section class="sec wrap" id="making">
+  <h2>From mud<br>to <em>morning coffee</em></h2>
+  <div class="steps" id="steps">
+    <i></i>
+    <div class="step"><h3>Wedge</h3><p>Clay is kneaded to push out air and even out the moisture.</p></div>
+    <div class="step"><h3>Throw</h3><p>Every form is pulled by hand on the wheel, one piece at a time.</p></div>
+    <div class="step"><h3>Trim</h3><p>Once leather-hard, the base is turned and the foot is cleaned up.</p></div>
+    <div class="step"><h3>Glaze</h3><p>Glazes are mixed in the studio and tested in small batches first.</p></div>
+    <div class="step"><h3>Fire</h3><p>A final firing in the kiln fixes the colour and makes it food safe.</p></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="studio">
+  <h2>The <em>studio</em></h2>
+  <div class="about">
+    <p class="big">I make everyday objects slowly. A mug should feel right in the hand long after it stops being new.</p>
+    <dl class="facts">
+      <div><dt>Based in</dt><dd>[ADD: city]</dd></div>
+      <div><dt>Practice</dt><dd>Wheel-thrown stoneware</dd></div>
+      <div><dt>Exhibitions</dt><dd>[ADD: shows and markets]</dd></div>
+      <div><dt>Stockists</dt><dd>[ADD: shops]</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="end" id="contact">
+  <h2 class="rv">Let's make something <em>for your table.</em></h2>
+  <a class="mail" href="mailto:studio@example.com">studio@example.com</a>
+  <div class="links"><a href="#">Instagram</a><a href="#">Shop</a><a href="#">Price list</a></div>
+  <footer><span>© 2026 Ines Duarte Ceramics</span><span>Sample portfolio design</span></footer>
+</section>
+</main>
+
+<script>
+const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+const S={
+ vase:"M35 6H65C64 28 82 40 84 72C86 102 70 114 50 114C30 114 14 102 16 72C18 40 36 28 35 6Z",
+ bowl:"M6 38H94C94 86 72 110 50 110C28 110 6 86 6 38Z",
+ bottle:"M44 4H56V34C56 46 78 54 78 82C78 106 66 114 50 114C34 114 22 106 22 82C22 54 44 46 44 34Z",
+ jug:"M24 18H76C72 30 82 42 82 64C82 98 68 112 50 112C32 112 18 98 18 64C18 42 28 30 24 18Z",
+ cup:"M26 22H74L67 110H33Z",
+ moon:"M50 6C80 6 92 34 92 64C92 98 74 114 50 114C26 114 8 98 8 64C8 34 20 6 50 6Z"
+};
+let uid=0;
+function vessel(t,a,b,band){const id="g"+uid++,hl=`<path d="M30 ${t==="bowl"?46:30}Q24 70 32 96" stroke="#fff" stroke-opacity=".28" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+ return `<div class="v"><svg viewBox="0 0 100 120"><defs><linearGradient id="${id}" x1="0" x2="1"><stop offset="0" stop-color="${a}"/><stop offset=".55" stop-color="${b}"/><stop offset="1" stop-color="${a}" stop-opacity=".78"/></linearGradient><clipPath id="c${id}"><path d="${S[t]}"/></clipPath></defs><ellipse cx="50" cy="116" rx="40" ry="3.5" fill="#000" opacity=".22"/><path d="${S[t]}" fill="url(#${id})"/><g clip-path="url(#c${id})">${band?`<rect x="0" y="${band}" width="100" height="9" fill="#000" opacity=".16"/><rect x="0" y="${band+14}" width="100" height="2.5" fill="#fff" opacity=".35"/>`:""}</g>${hl}</svg></div>`}
+const hero=[["vase","#8e2a2a","#c4574a",64],["bottle","#2b4fa0","#5d86d6",72],["moon","#e6dcc8","#fffaf0",60],["jug","#c8933a","#efc66f",56],["cup","#9fc4b0","#d3ebde",50]];
+document.getElementById("shelf").innerHTML=hero.map(h=>vessel(...h)).join("");
+const C=[
+ ["Oxblood","#3a1114","#f4e6df",[["vase","#8e2a2a","#d0685a",70],["jug","#6e1e22","#b84b48",58],["bottle","#9b3330","#e0786b",80],["cup","#7b2024","#c25a52",48]],"Deep red glaze, pooling dark at the edges. Table jugs, vases and cups.","24 pieces"],
+ ["Celadon","#cfe0d6","#17201d",[["bowl","#8bb9a2","#d4eadd",null],["cup","#a8cdb9","#e6f4ec",56],["moon","#78a891","#c3dfd0",70],["bowl","#97c3ac","#dcefe4",null]],"A pale green that shifts with the light. Bowls and cups for daily use.","31 pieces"],
+ ["Cobalt","#16275a","#eaf0ff",[["bottle","#2b4fa0","#6f98ea",76],["moon","#1f3d86","#4e79cf",62],["vase","#35599f","#85a8ee",54],["jug","#243f87","#5a84d8",68]],"Saturated blue over a rough white body. Bottles and vases for flowers.","18 pieces"],
+ ["Bone","#e8dfd0","#2a2118",[["cup","#f1ebe0","#fffdf8",60],["bowl","#ddd2bf","#f7f1e6",null],["vase","#e9e0cf","#fffbf2",66],["jug","#d4c8b2","#f3ecdd",52]],"Matte white, unglazed on the base. A quiet set for the table.","27 pieces"]
+];
+document.getElementById("cols").innerHTML=C.map((c,i)=>`<article class="col rv" style="background:${c[1]};color:${c[2]}"><div class="stage">${c[3].map(v=>vessel(...v)).join("")}</div><div class="info"><span class="num">No. 0${i+1}</span><h3>${c[0]}</h3><p>${c[4]}</p><div class="meta"><span>${c[5]}</span><span>[ADD: price range]</span></div></div></article>`).join("");
+// Hero: pieces lean toward the cursor
+const sh=[...document.querySelectorAll("#shelf .v")];
+if(!RM)document.querySelector(".hero").addEventListener("pointermove",e=>{const w=innerWidth;sh.forEach((v,i)=>{const r=v.getBoundingClientRect(),d=(e.clientX-(r.left+r.width/2))/w,n=Math.max(0,1-Math.abs(d)*3.2);v.style.transform=`translateY(${-n*26}px) rotate(${d*14}deg)`})});
+document.querySelector(".hero").addEventListener("pointerleave",()=>sh.forEach(v=>v.style.transform=""));
+// Reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+// Making: line fills as you scroll
+const st=document.getElementById("steps"),ss=[...st.querySelectorAll(".step")];
+function upd(){const r=st.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));st.style.setProperty("--h",p*100+"%");ss.forEach(s=>s.classList.toggle("on",s.getBoundingClientRect().top<innerHeight*.6))}
+addEventListener("scroll",upd,{passive:true});upd();
+</script>
+</body>
+</html>
